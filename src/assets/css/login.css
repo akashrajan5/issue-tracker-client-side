@@ -1,0 +1,14 @@
+.outer {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.form-label {
+    margin-bottom: 0.2rem;
+}
+
+.header-text {
+    margin-bottom: 30px;
+}
