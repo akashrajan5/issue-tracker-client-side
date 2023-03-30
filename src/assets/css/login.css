@@ -12,3 +12,10 @@
 .header-text {
     margin-bottom: 30px;
 }
+
+.inside-outer {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

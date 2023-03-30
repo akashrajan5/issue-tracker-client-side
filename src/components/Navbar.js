@@ -1,6 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../customHooks/useAuth";
 
 export const Navbar = () => {
+    const auth = useAuth();
+    const navigate = useNavigate();
+    const logout = () => {
+        auth.logout();
+        navigate('/login');
+    };
+
     return (
         <nav className="navbar bg-light navbar-light px-2">
             <div className="d-flex justify-content-center align-items-center">
@@ -10,9 +19,9 @@ export const Navbar = () => {
                 Bug tracking
             </div>
             <div>
-                <a className="text-dark d-flex justify-content-center align-items-center text-decoration-none" href="/">
+                <button className="text-dark d-flex justify-content-center align-items-center btn p-0 border-none" onClick={logout}>
                     <span className="material-symbols-outlined">account_circle</span>
-                </a>
+                </button>
             </div>
         </nav>
     );
